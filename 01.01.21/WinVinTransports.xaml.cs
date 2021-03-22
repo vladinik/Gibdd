@@ -51,25 +51,25 @@ namespace Gibdd
                                         {
                                             
                                             
-                                                Drivers driver = new Drivers();
-                                                driver.Id = int.Parse(TextBoxIden.Text);
-                                                driver.Name = TextBoxName.Text;
-                                                driver.Lastname = TextBoxFam.Text;
-                                                driver.Middlename = TextBoxMid.Text;
-                                                driver.PassportSerial = int.Parse(TextBoxSer.Text);
-                                                driver.PassportNumber = int.Parse(TextBoxNum.Text);
-                                                driver.Postcode = int.Parse(TextBoxIden.Text);
-                                                driver.Address = TextBoxReg.Text;
-                                                driver.AddressLife = TextBoxPro.Text;
-                                                driver.Company = TextBoxRab.Text;
-                                                driver.Jobname = TextBoxDol.Text;
-                                                driver.Phone = TextBoxPhone.Text;
-                                                driver.Email = TextBoxEmail.Text;
-                                                driver.Description = TextBoxZam.Text;
-                                                driver.Photo = path.Substring(path.LastIndexOf("\\") + 1);
-                                                db.Drivers.Add(driver);
-                                                db.SaveChanges();
-                                                MessageBox.Show("Транспортное средство добавлено!");
+                                                //Drivers driver = new Drivers();
+                                                //driver.Id = int.Parse(TextBoxIden.Text);
+                                                //driver.Name = TextBoxName.Text;
+                                                //driver.Lastname = TextBoxFam.Text;
+                                                //driver.Middlename = TextBoxMid.Text;
+                                                //driver.PassportSerial = int.Parse(TextBoxSer.Text);
+                                                //driver.PassportNumber = int.Parse(TextBoxNum.Text);
+                                                //driver.Postcode = int.Parse(TextBoxIden.Text);
+                                                //driver.Address = TextBoxReg.Text;
+                                                //driver.AddressLife = TextBoxPro.Text;
+                                                //driver.Company = TextBoxRab.Text;
+                                                //driver.Jobname = TextBoxDol.Text;
+                                                //driver.Phone = TextBoxPhone.Text;
+                                                //driver.Email = TextBoxEmail.Text;
+                                                //driver.Description = TextBoxZam.Text;
+                                                //driver.Photo = path.Substring(path.LastIndexOf("\\") + 1);
+                                                //db.Drivers.Add(driver);
+                                                //db.SaveChanges();
+                                                //MessageBox.Show("Транспортное средство добавлено!");
                                             
                                         }
                                     }
