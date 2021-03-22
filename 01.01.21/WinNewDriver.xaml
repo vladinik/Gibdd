@@ -1,0 +1,60 @@
+﻿<Window x:Class="Gibdd.WinNewDriver"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gibdd"
+        mc:Ignorable="d"
+        Title="WinNewDriver" Height="450" Width="800">
+    <Grid>
+        <Grid x:Name="GridImage" HorizontalAlignment="Left" Height="100" Margin="0,2,0,0" VerticalAlignment="Top" Width="792" Background="#FFB5D5CA">
+            <Image Margin="0,0,682,1" Source="gibdd_logo.png" Stretch="Fill" Width="110" OpacityMask="#FF666609"/>
+            <Label Content="Создание водителя" HorizontalAlignment="Left" Margin="129,10,0,0" VerticalAlignment="Top" Width="653" Height="88" FontSize="18" FontFamily="Times New Roman" FontWeight="Bold"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="318" Margin="1,101,0,0" VerticalAlignment="Top" Width="791" Background="#FFE0A9AF">
+            <Label Content="Почтовый индекс*" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="113"/>
+            <Label Content="Фамилия*" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="113"/>
+            <Label Content="Имя*" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="113"/>
+            <Label Content="Отчество*" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.132,0.038" Width="113"/>
+            <GroupBox Header="Паспорт*" HorizontalAlignment="Left" Height="123" Margin="10,134,0,0" VerticalAlignment="Top" Width="324"/>
+            <StackPanel HorizontalAlignment="Left" Height="96" Margin="10,149,0,0" VerticalAlignment="Top" Width="324">
+                <Label Content="Серия" HorizontalAlignment="Left" VerticalAlignment="Top" Width="58"/>
+                <TextBox x:Name="TextBoxSer" HorizontalAlignment="Left" Height="21" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="151,0,0,0" RenderTransformOrigin="0.5,0.5">
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+                <Label Content="Номер" HorizontalAlignment="Left" VerticalAlignment="Top" Width="58"/>
+                <TextBox x:Name="TextBoxNum" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="151,0,0,0"/>
+            </StackPanel>
+            <Label Content="Адрес регистрации*" HorizontalAlignment="Left" Margin="10,262,0,0" VerticalAlignment="Top" Width="122" Height="46"/>
+            <Label Content="Адрес проживания*" HorizontalAlignment="Left" Margin="350,10,0,0" VerticalAlignment="Top" Width="122"/>
+            <Label Content="Место работы" HorizontalAlignment="Left" Margin="350,38,0,0" VerticalAlignment="Top" Width="122"/>
+            <Label Content="Должность" HorizontalAlignment="Left" Margin="350,69,0,0" VerticalAlignment="Top" Width="122"/>
+            <Label Content="Мобильный телефон*" HorizontalAlignment="Left" Margin="350,95,0,0" VerticalAlignment="Top" Width="132"/>
+            <Label Content="Email*" HorizontalAlignment="Left" Margin="350,126,0,0" VerticalAlignment="Top" Width="122"/>
+            <Label Content="Фотография*" HorizontalAlignment="Left" Margin="350,149,0,0" VerticalAlignment="Top" Width="122"/>
+            <Label Content="Замечания" HorizontalAlignment="Left" Margin="350,180,0,0" VerticalAlignment="Top" Width="122"/>
+            <TextBox x:Name="TextBoxIden" HorizontalAlignment="Left" Height="23" Margin="128,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217"/>
+            <TextBox x:Name="TextBoxFam" HorizontalAlignment="Left" Height="23" Margin="128,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217"/>
+            <TextBox x:Name="TextBoxName" HorizontalAlignment="Left" Height="23" Margin="128,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217"/>
+            <TextBox x:Name="TextBoxMid" HorizontalAlignment="Left" Height="23" Margin="128,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217"/>
+            <TextBox x:Name="TextBoxReg" HorizontalAlignment="Left" Height="46" Margin="137,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208"/>
+            <TextBox x:Name="TextBoxPro" HorizontalAlignment="Left" Height="23" Margin="487,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"/>
+            <TextBox x:Name="TextBoxRab" HorizontalAlignment="Left" Height="23" Margin="487,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"/>
+            <TextBox x:Name="TextBoxDol" HorizontalAlignment="Left" Height="23" Margin="487,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"/>
+            <TextBox x:Name="TextBoxPhone" HorizontalAlignment="Left" Height="23" Margin="487,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"/>
+            <TextBox x:Name="TextBoxEmail" HorizontalAlignment="Left" Height="23" Margin="487,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"/>
+            <TextBox x:Name="TextBoxZam" HorizontalAlignment="Left" Height="23" Margin="487,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"/>
+            <Button x:Name="ButtonZap" Content="Записать" HorizontalAlignment="Left" Margin="706,240,0,0" VerticalAlignment="Top" Width="75" Height="43" Click="ButtonZap_Click" RenderTransformOrigin="6.72,2.279" Background="#FFB5D5CA"/>
+            <Button x:Name="ButtonLoad" Content="Загрузить" HorizontalAlignment="Left" Margin="487,155,0,0" VerticalAlignment="Top" Width="294" Click="ButtonLoad_Click" Background="#FFB5D5CA"/>
+            <Button x:Name="ButtonNaz" Content="Назад" HorizontalAlignment="Left" Margin="706,288,0,10" Width="75" Click="ButtonNaz_Click" Background="#FFB5D5CA"/>
+            <Image x:Name="ImagePfoto" HorizontalAlignment="Left" Height="100" Margin="350,211,0,0" VerticalAlignment="Top" Width="285"/>
+        </Grid>
+    </Grid>
+</Window>

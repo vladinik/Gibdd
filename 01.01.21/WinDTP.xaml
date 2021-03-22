@@ -1,0 +1,19 @@
+﻿<Window x:Class="Gibdd.WinDTP"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gibdd"
+        mc:Ignorable="d"
+        Title="WinDTP" Height="450" Width="800">
+    <Grid Background="#FFB5D5CA">
+        <Grid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="792" Background="#FFE0A9AF">
+            <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="gibdd_logo.png"/>
+            <Label Content="                       ДТП" HorizontalAlignment="Left" Margin="273,28,0,0" VerticalAlignment="Top" Height="46" Width="260" FontSize="18"/>
+        </Grid>
+        <DataGrid x:Name="DataGridDTP" HorizontalAlignment="Left" Height="205" Margin="5,100,0,0" VerticalAlignment="Top" Width="785"/>
+        <Button x:Name="ButtonAdd" Content="Показать" HorizontalAlignment="Left" Margin="35,320,0,0" VerticalAlignment="Top" Width="75" Background="#FFE0A9AF" Click="Button_Click"/>
+        <Button x:Name="ButtonNaz" Content="Назад" HorizontalAlignment="Left" Margin="645,325,0,0" VerticalAlignment="Top" Width="75" Background="#FFE0A9AF" Click="Button_Click"/>
+
+    </Grid>
+</Window>

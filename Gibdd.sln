@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibdd", "01.01.21\Gibdd.csproj", "{090C6E92-6C14-4FC3-B0DC-2DDE54ED3804}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{090C6E92-6C14-4FC3-B0DC-2DDE54ED3804}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{090C6E92-6C14-4FC3-B0DC-2DDE54ED3804}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{090C6E92-6C14-4FC3-B0DC-2DDE54ED3804}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{090C6E92-6C14-4FC3-B0DC-2DDE54ED3804}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62D8D3DB-89CE-4007-8BA8-A3B5FF44E942}
+	EndGlobalSection
+EndGlobal
