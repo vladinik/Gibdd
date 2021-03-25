@@ -38,6 +38,7 @@ namespace Gibdd
             private void ButtonIz_Click(object sender, RoutedEventArgs e)
         {
             DialogResult = true;
+
             this.Close();
             //{
             //    if (TextBoxFam.Text.Length != 0)
@@ -90,14 +91,14 @@ namespace Gibdd
 
         private void ButtonLoad_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult = true;
-            this.Close();
+            //DialogResult = true;
+            //this.Close();
         }
 
         private void ButtonNaz_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult = false;
-            this.Close();
+            //DialogResult = false;
+            //this.Close();
         }
     }
 }

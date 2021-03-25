@@ -11,7 +11,7 @@
                 <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="gibdd_logo.png"/>
                 <Label Content="Водительское удостоверение" HorizontalAlignment="Left" Margin="273,28,0,0" VerticalAlignment="Top" Height="46" Width="260" FontSize="18"/>
             </Grid>
-            <Button x:Name="ButtonChange" Content="Добавить ВУ" HorizontalAlignment="Left" Margin="478,382,0,0" VerticalAlignment="Top" Width="124" Height="27" Background="#FFE0A9AF" Click="ButtonChange_Click"/>
+            <Button x:Name="ButtonChange" Content="Изменить ВУ" Margin="535,385,133,0" VerticalAlignment="Top" Width="124" Height="27" Background="#FFE0A9AF" Click="ButtonChange_Click"/>
             <Label Content="ID Driver" HorizontalAlignment="Left" Margin="29,122,0,0" VerticalAlignment="Top"/>
             <Label Content="Дата выдачи" HorizontalAlignment="Left" Margin="29,148,0,0" VerticalAlignment="Top" Width="75"/>
             <Label Content="Срок истечения" HorizontalAlignment="Left" Margin="20,179,0,0" VerticalAlignment="Top" Width="97"/>
@@ -45,7 +45,7 @@
             <TextBox x:Name="TextBoxZapis" HorizontalAlignment="Left" Height="23" Margin="122,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <TextBox x:Name="TextBoxCity" HorizontalAlignment="Left" Height="23" Margin="548,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <TextBox x:Name="TextBoxName" HorizontalAlignment="Left" Height="23" Margin="548,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <Button x:Name="ButtonBack" Content="Назад" HorizontalAlignment="Left" Margin="638,382,0,0" VerticalAlignment="Top" Width="106" Height="27" Click="ButtonBack_Click" Background="#FFE0A9AF"/>
+            <Button x:Name="ButtonBack" Content="Назад" HorizontalAlignment="Left" Margin="680,385,0,0" VerticalAlignment="Top" Width="106" Height="27" Click="ButtonBack_Click" Background="#FFE0A9AF"/>
             <Label Content="Фото" HorizontalAlignment="Left" Margin="576,204,0,0" VerticalAlignment="Top"/>
             <Image HorizontalAlignment="Left" Height="108" Margin="514,238,0,0" VerticalAlignment="Top" Width="175"/>
 

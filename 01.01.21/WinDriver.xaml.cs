@@ -26,18 +26,24 @@ namespace Gibdd
         {
 
             InitializeComponent();
+
+
             FillTable();
         }
-        private void FillTable()
+        public void FillTable()
         {
-            drivers.Clear();
-            using (GIBDDContainer1 db = new GIBDDContainer1())
+             
+            using (GIBDDContainer db = new GIBDDContainer())
             {
+
                 foreach (Drivers u in db.Drivers)
                     drivers.Add(u);
-                DataGridVoditeli.ItemsSource = drivers;
+
+                DataGridVoditeli.ItemsSource = db.Drivers.Local.ToBindingList();
+
 
             }
+
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
@@ -56,7 +62,9 @@ namespace Gibdd
                 if (index != null)
                 {
                     int id = int.Parse((DataGridVoditeli.SelectedCells[0].Column.GetCellContent(index) as TextBlock).Text);
-                    using (GIBDDContainer1 db = new GIBDDContainer1())
+                   
+
+                    using (GIBDDContainer db = new GIBDDContainer())
                     {
 
                         Drivers driver = db.Drivers.Find(id);
@@ -75,7 +83,7 @@ namespace Gibdd
                         string photo = "C:\\Users\\3курс\\Desktop\\мдк 01.01\\01.02\\GIBDD\\bin\\Debug\\photo\\" + driver.Photo;
                         dobDriver.TextBoxZam.Text = driver.Description;
 
-                        if (dobDriver.ShowDialog().HasValue) return;
+                        if (!dobDriver.ShowDialog().HasValue) return;
 
                         driver.Lastname = dobDriver.TextBoxFam.Text;
                         driver.Name = dobDriver.TextBoxName.Text;
@@ -91,10 +99,16 @@ namespace Gibdd
                         driver.Description = dobDriver.TextBoxZam.Text;
                         db.SaveChanges();
                     }
+
                 }
-                FillTable();
+
 
             }
+            FillTable();
+
+
+
+
         }
         int id;
         private void ButtonVY_Click(object sender, RoutedEventArgs e)
@@ -105,7 +119,7 @@ namespace Gibdd
                 if (index != null)
                     id = int.Parse((DataGridVoditeli.SelectedCells[0].Column.GetCellContent(index) as TextBlock).Text);
                 WinVY winVY = new WinVY();
-                using (GIBDDContainer1 db = new GIBDDContainer1())
+                using (GIBDDContainer db = new GIBDDContainer())
                 {
                     var licenses = db.Licences.First(p => p.idDriver == id);
                     winVY.TextBoxLic.Text = licenses.LicenceSeries;

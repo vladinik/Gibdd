@@ -13,9 +13,9 @@ namespace Gibdd
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class GIBDDContainer1 : DbContext
+    public partial class GIBDDContainer : DbContext
     {
-        public GIBDDContainer1()
+        public GIBDDContainer()
             : base("name=GIBDDContainer1")
         {
         }

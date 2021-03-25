@@ -30,5 +30,10 @@ namespace Gibdd
             this.Hide();
             winVoditeli.Show();
         }
+
+        private void ButtonChange_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

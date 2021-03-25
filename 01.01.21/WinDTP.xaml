@@ -12,8 +12,8 @@
             <Label Content="                       ДТП" HorizontalAlignment="Left" Margin="273,28,0,0" VerticalAlignment="Top" Height="46" Width="260" FontSize="18"/>
         </Grid>
         <DataGrid x:Name="DataGridDTP" HorizontalAlignment="Left" Height="205" Margin="5,100,0,0" VerticalAlignment="Top" Width="785"/>
-        <Button x:Name="ButtonAdd" Content="Показать" HorizontalAlignment="Left" Margin="35,320,0,0" VerticalAlignment="Top" Width="75" Background="#FFE0A9AF" Click="Button_Click"/>
-        <Button x:Name="ButtonNaz" Content="Назад" HorizontalAlignment="Left" Margin="645,325,0,0" VerticalAlignment="Top" Width="75" Background="#FFE0A9AF" Click="Button_Click"/>
+        <Button x:Name="ButtonAdd" Content="Показать" Margin="35,320,0,0" VerticalAlignment="Top" Width="75" Background="#FFE0A9AF" Click="ButtonAdd_Click"/>
+        <Button x:Name="ButtonNaz" Content="Назад" Margin="645,325,0,0" VerticalAlignment="Top" Width="75" Background="#FFE0A9AF" Click="ButtonNaz_Click"/>
 
     </Grid>
 </Window>

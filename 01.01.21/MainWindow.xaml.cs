@@ -45,7 +45,7 @@ namespace Gibdd
             {
                 WinDriver newGIBDD = new WinDriver();
                 this.Hide();
-                newGIBDD.ShowDialog();
+                newGIBDD.Show();
             }
         }
     }

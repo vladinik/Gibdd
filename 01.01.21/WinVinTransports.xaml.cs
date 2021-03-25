@@ -24,7 +24,7 @@ namespace Gibdd
         public WinVinTransports()
         {
             InitializeComponent();
-            using (GIBDDContainer1 db = new GIBDDContainer1())
+            using (GIBDDContainer db = new GIBDDContainer())
             {
                 drivers.Clear();
                 drivers = db.Drivers.ToList();

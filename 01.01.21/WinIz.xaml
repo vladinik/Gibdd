@@ -55,7 +55,7 @@
             <TextBox x:Name="TextBoxPhone" HorizontalAlignment="Left" Height="23" Margin="487,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294" Grid.ColumnSpan="2"/>
             <TextBox x:Name="TextBoxEmail" HorizontalAlignment="Left" Height="23" Margin="487,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294" Grid.ColumnSpan="2"/>
             <TextBox x:Name="TextBoxZam" HorizontalAlignment="Left" Height="23" Margin="487,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294" Grid.ColumnSpan="2"/>
-            <Button x:Name="ButtonIz" Content="Изменить пользователя " HorizontalAlignment="Left" Margin="139,273,0,7" Width="195" Click="ButtonIz_Click" Background="#FFE0A9AF"/>
+            <Button x:Name="ButtonIz" Content="Изменить пользователя " HorizontalAlignment="Left" Margin="139,273,0,7" Width="195" Click="ButtonIz_Click" Background="#FFE0A9AF" IsDefault="True"/>
             <Button x:Name="ButtonLoad" Content="Изменить" HorizontalAlignment="Left" Margin="487,155,0,0" VerticalAlignment="Top" Width="294" Background="#FFE0A9AF" Grid.ColumnSpan="2" Click="ButtonLoad_Click"/>
             <Button x:Name="ButtonNaz" Content="Назад" HorizontalAlignment="Left" Margin="10,288,0,0" VerticalAlignment="Top" Width="76" Click="ButtonNaz_Click" Background="#FFE0A9AF"/>
             <Image HorizontalAlignment="Left" Height="100" Margin="359,211,0,0" VerticalAlignment="Top" Width="426" Grid.ColumnSpan="2"/>
