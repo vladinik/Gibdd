@@ -13,7 +13,8 @@
         </Grid>
         <DataGrid x:Name="DataGridDTP" HorizontalAlignment="Left" Height="205" Margin="5,100,0,0" VerticalAlignment="Top" Width="785"/>
         <Button x:Name="ButtonAdd" Content="Показать" Margin="35,320,0,0" VerticalAlignment="Top" Width="75" Background="#FFE0A9AF" Click="ButtonAdd_Click"/>
-        <Button x:Name="ButtonNaz" Content="Назад" Margin="645,325,0,0" VerticalAlignment="Top" Width="75" Background="#FFE0A9AF" Click="ButtonNaz_Click"/>
+        <Button x:Name="ButtonNaz" Content="Назад" Margin="10,320,707,0" VerticalAlignment="Top" Width="75" Background="#FFE0A9AF" Click="ButtonNaz_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="707,320,0,0" VerticalAlignment="Top" Width="75" Background="#FFE0A9AF"/>
 
     </Grid>
 </Window>
