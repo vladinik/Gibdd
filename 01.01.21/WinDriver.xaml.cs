@@ -121,7 +121,7 @@ namespace Gibdd
                 WinVY winVY = new WinVY();
                 using (GIBDDContainer db = new GIBDDContainer())
                 {
-                    var licenses = db.Licences.First(p => p.idDriver == id);
+                    var licenses = db.Licences.FirstOrDefault(p => p.idDriver == id);
                     winVY.TextBoxLic.Text = licenses.LicenceSeries;
                     winVY.TextBoxNumber.Text = licenses.LicenceNumber.ToString();
                     winVY.TextBoxExpire.Text = licenses.ExpireDate.ToString();

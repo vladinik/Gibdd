@@ -97,8 +97,9 @@ namespace Gibdd
 
         private void ButtonNaz_Click(object sender, RoutedEventArgs e)
         {
-            //DialogResult = false;
-            //this.Close();
+            WinDriver winVoditeli = new WinDriver();
+            this.Hide();
+            winVoditeli.Show();
         }
     }
 }

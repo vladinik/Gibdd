@@ -121,6 +121,9 @@
     <Compile Include="WinIz.xaml.cs">
       <DependentUpon>WinIz.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinLegoDTP.xaml.cs">
+      <DependentUpon>WinLegoDTP.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinNewDriver.xaml.cs">
       <DependentUpon>WinNewDriver.xaml</DependentUpon>
     </Compile>
@@ -151,6 +154,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinIz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinLegoDTP.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

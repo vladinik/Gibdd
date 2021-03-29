@@ -83,7 +83,7 @@ namespace Gibdd
                                                 driver.Photo = path.Substring(path.LastIndexOf("\\") + 1);
                                                 db.Drivers.Add(driver);
                                                 db.SaveChanges();
-                                                MessageBox.Show("Полььзователь зарегестрирован");
+                                                MessageBox.Show("Пользователь зарегестрирован");
                                             }
                                         }
                                     }
