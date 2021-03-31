@@ -84,24 +84,17 @@ namespace Gibdd
 
         private void ButtonChange_Click(object sender, RoutedEventArgs e)
         {
-            //using (GIBDDContainer db = new GIBDDContainer())
-            //{
-            //    licenses.City = winVY.TextBoxCity.Text;
-            //    licenses.LicenceNumber = winVY.TextBoxNumber.Text;
-            //    licenses.LicenceSeries = winVY.TextBoxLic.Text;
-            //    licenses.Issued = winVY.TextBoxVidan.Text;
-            //    licenses.ExpireDate = DateTime.Parse(winVY.TextBoxExpire.Text);
-            //    licenses.Categories = winVY.TextBoxCat.Text;
-            //    licenses.LicenceDate = DateTime.Parse(winVY.TextBoxDate.Text);
-            //    drivers.Lastname = winVY.TextBoxSurname.Text;
-            //    licenses.LicenceNumber = winVY.TextBoxNumber.Text;
-            //    drivers.Name = winVY.TextBoxName.Text;
-            //    licenses.Categories = winVY.TextBoxCat.Text;
-            //    winVY. = int.Parse(TextBoxDriver.Text);
-            //    var lic = db.Licences.Find(id);
+            //DialogResult = true;
 
-            //    db.SaveChanges();
-            //}
+            //this.Close();
+            using (GIBDDContainer db = new GIBDDContainer())
+            {
+                Licences licences = new Licences();
+                licences.IdZapis = int.Parse(TextBoxZapis.Text);
+                licences.idDriver = int.Parse(TextBoxZapis.Text);
+               
+                db.SaveChanges();
+            }
         }
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
