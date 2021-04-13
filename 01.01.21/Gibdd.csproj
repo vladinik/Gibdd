@@ -100,6 +100,9 @@
     <Compile Include="PlaceFines.cs">
       <DependentUpon>GIBDD.tt</DependentUpon>
     </Compile>
+    <Compile Include="PTS.xaml.cs">
+      <DependentUpon>PTS.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegionSet.cs">
       <DependentUpon>GIBDD.tt</DependentUpon>
     </Compile>
@@ -145,6 +148,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PTS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WinDriver.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

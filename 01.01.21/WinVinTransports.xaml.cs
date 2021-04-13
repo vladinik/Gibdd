@@ -24,7 +24,7 @@ namespace Gibdd
         public WinVinTransports()
         {
             InitializeComponent();
-            using (GIBDDContainer db = new GIBDDContainer())
+            using (GIBDDContainer1 db = new GIBDDContainer1())
             {
                 drivers.Clear();
                 drivers = db.Drivers.ToList();
@@ -33,44 +33,54 @@ namespace Gibdd
 
         private void ButtonZap_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBoxVinNumAvto.Text.Length != 0)
+            using (GIBDDContainer1 db = new GIBDDContainer1())
             {
-                if (TextBoxMarka.Text.Length != 0)
+                if (TextBoxVinNumAvto.Text.Length != 0)
                 {
-                    if (TextBoxModel.Text.Length != 0)
+                    if (TextBoxMarka.Text.Length != 0)
                     {
-                        if (TextBoxTeipTransSred.Text.Length != 0 || TextBoxCategoriesTransSred.Text.Length != 0)
+                        if (TextBoxModel.Text.Length != 0)
                         {
-                            if (TextBoxGodV.Text.Length != 0 || TextBoxNumColor.Text.Length != 0)
+                            if (TextBoxTeipTransSred.Text.Length != 0 || TextBoxCategoriesTransSred.Text.Length != 0)
                             {
-                                if (TextBoxVesAvto.Text.Length != 0 || TextBoxTipDvig.Text.Length!=0)
+                                if (TextBoxGodV.Text.Length != 0 || TextBoxNumColor.Text.Length != 0)
                                 {
-                                    if (TextBoxVesAvtoKG.Text.Length != 0 || TextBoxTipPrivod.Text.Length !=0)
+                                    if (TextBoxVesAvto.Text.Length != 0 || TextBoxTipDvig.Text.Length != 0)
                                     {
-                                        if (path != null)
+                                        if (TextBoxVesAvtoKG.Text.Length != 0 || TextBoxTipPrivod.Text.Length != 0)
                                         {
-                                            
-                                            
-                                                //Drivers driver = new Drivers();
-                                                //driver.Id = int.Parse(TextBoxIden.Text);
-                                                //driver.Name = TextBoxName.Text;
-                                                //driver.Lastname = TextBoxFam.Text;
-                                                //driver.Middlename = TextBoxMid.Text;
-                                                //driver.PassportSerial = int.Parse(TextBoxSer.Text);
-                                                //driver.PassportNumber = int.Parse(TextBoxNum.Text);
-                                                //driver.Postcode = int.Parse(TextBoxIden.Text);
-                                                //driver.Address = TextBoxReg.Text;
-                                                //driver.AddressLife = TextBoxPro.Text;
-                                                //driver.Company = TextBoxRab.Text;
-                                                //driver.Jobname = TextBoxDol.Text;
-                                                //driver.Phone = TextBoxPhone.Text;
-                                                //driver.Email = TextBoxEmail.Text;
-                                                //driver.Description = TextBoxZam.Text;
-                                                //driver.Photo = path.Substring(path.LastIndexOf("\\") + 1);
-                                                //db.Drivers.Add(driver);
-                                                //db.SaveChanges();
-                                                //MessageBox.Show("Транспортное средство добавлено!");
-                                            
+                                            if (path != null)
+                                            {
+
+
+                                                Transport transport = new Transport();
+                                                Licences licences = new Licences();
+                                                transport.Vin = TextBoxVinNumAvto.Text;
+                                                transport.Manufacturer = int.Parse(TextBoxMarka.Text);
+                                                transport.Model = TextBoxModel.Text;
+                                                transport.TypeTS = TextBoxTeipTransSred.Text;
+                                                licences.Categories = TextBoxCategoriesTransSred.Text;
+                                                transport.Year = int.Parse(TextBoxGodV.Text);
+                                                transport.EngineNumber = TextBoxNumDvig.Text;
+                                                transport.ModelEngine = TextBoxModelDvig.Text;
+                                                transport.YearEngine = TextBoxGodDvig.Text;
+                                                transport.Color = int.Parse(TextBoxNumColor.Text);
+                                                transport.ModelEngineKvt = TextBoxMoDvigKvt.Text;
+                                                transport.ModelEngineLoSi = TextBoxMoDvigLoSi.Text;
+                                                transport.MacsNag = TextBoxMacsNag.Text;
+                                                transport.Weight = int.Parse(TextBoxVesAvto.Text);
+                                                transport.EngineType = int.Parse(TextBoxTipDvig.Text);
+                                                transport.VesAvtoKG = TextBoxVesAvtoKG.Text;
+                                                transport.TypeOfDrive = TextBoxTipPrivod.Text;
+                                                transport.Comment = TextBoxComment.Text;
+                                                transport.Vlad = TextBoxVlad.Text;
+                                                db.Transport.Add(transport);
+                                                db.SaveChanges();
+                                                db.Licences.Add(licences);
+                                                db.SaveChanges();
+                                                MessageBox.Show("Заполнено!");
+
+                                            }
                                         }
                                     }
                                 }
@@ -86,6 +96,11 @@ namespace Gibdd
             WinDriver winVoditeli = new WinDriver();
             this.Hide();
             winVoditeli.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

@@ -28,7 +28,7 @@ namespace Gibdd
         public WinNewDriver()
         {
             InitializeComponent();
-            using (GIBDDContainer db = new GIBDDContainer())
+            using (GIBDDContainer1 db = new GIBDDContainer1())
             {
                 drivers.Clear();
                 drivers = db.Drivers.ToList();
@@ -63,7 +63,7 @@ namespace Gibdd
                                     {
                                         if (path != null)
                                         {
-                                            using (GIBDDContainer db = new GIBDDContainer())
+                                            using (GIBDDContainer1 db = new GIBDDContainer1())
                                             {
                                                 Drivers driver = new Drivers();
                                                 driver.Id = int.Parse(TextBoxIden.Text);

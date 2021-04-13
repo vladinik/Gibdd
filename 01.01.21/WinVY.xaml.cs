@@ -50,7 +50,7 @@ namespace Gibdd
                 if (index != null) ;
                 int id = int.Parse((DataGridVY.SelectedCells[0].Column.GetCellContent(index) as TextBlock).Text);
 
-                using (GIBDDContainer db = new GIBDDContainer())
+                using (GIBDDContainer1 db = new GIBDDContainer1())
                 {
 
                     Licences drivers = db.Licences.Find(id);
@@ -87,7 +87,7 @@ namespace Gibdd
             //DialogResult = true;
 
             //this.Close();
-            using (GIBDDContainer db = new GIBDDContainer())
+            using (GIBDDContainer1 db = new GIBDDContainer1())
             {
                 Licences licences = new Licences();
                 licences.IdZapis = int.Parse(TextBoxZapis.Text);

@@ -23,6 +23,16 @@ namespace Gibdd
         public int Color { get; set; }
         public int EngineType { get; set; }
         public string TypeOfDrive { get; set; }
+        public string TypeTS { get; set; }
+        public string EngineNumber { get; set; }
+        public string ModelEngine { get; set; }
+        public string YearEngine { get; set; }
+        public string ModelEngineKvt { get; set; }
+        public string ModelEngineLoSi { get; set; }
+        public string MacsNag { get; set; }
+        public string VesAvtoKG { get; set; }
+        public string Comment { get; set; }
+        public string Vlad { get; set; }
     
         public virtual ColorsCar ColorsCar { get; set; }
         public virtual Drivers Drivers { get; set; }

@@ -138,6 +138,16 @@
           <Property Name="Color" Type="int" Nullable="false" />
           <Property Name="EngineType" Type="int" Nullable="false" />
           <Property Name="TypeOfDrive" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TypeTS" Type="nvarchar" MaxLength="50" />
+          <Property Name="EngineNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModelEngine" Type="nvarchar" MaxLength="50" />
+          <Property Name="YearEngine" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModelEngineKvt" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModelEngineLoSi" Type="nvarchar" MaxLength="50" />
+          <Property Name="MacsNag" Type="nvarchar" MaxLength="50" />
+          <Property Name="VesAvtoKG" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="50" />
+          <Property Name="Vlad" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_DriversAndLicences_ColorsCar">
           <End Role="ColorsCar" Type="Self.ColorsCar" Multiplicity="1" />
@@ -500,6 +510,16 @@
           <NavigationProperty Name="Drivers" Relationship="GIBDD.FK_DriversAndLicences_Drivers" FromRole="Transport" ToRole="Drivers" />
           <NavigationProperty Name="EngineType1" Relationship="GIBDD.FK_DriversAndLicences_EngineType" FromRole="Transport" ToRole="EngineType" />
           <NavigationProperty Name="Manufacture" Relationship="GIBDD.FK_DriversAndLicences_Manufacture" FromRole="Transport" ToRole="Manufacture" />
+          <Property Name="TypeTS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EngineNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModelEngine" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="YearEngine" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModelEngineKvt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModelEngineLoSi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MacsNag" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VesAvtoKG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Vlad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_DriversAndLicences_ColorsCar">
           <End Type="GIBDD.ColorsCar" Role="ColorsCar" Multiplicity="1" />
@@ -746,6 +766,16 @@
           <EntitySetMapping Name="Transport">
             <EntityTypeMapping TypeName="GIBDD.Transport">
               <MappingFragment StoreEntitySet="Transport">
+                <ScalarProperty Name="Vlad" ColumnName="Vlad" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="VesAvtoKG" ColumnName="VesAvtoKG" />
+                <ScalarProperty Name="MacsNag" ColumnName="MacsNag" />
+                <ScalarProperty Name="ModelEngineLoSi" ColumnName="ModelEngineLoSi" />
+                <ScalarProperty Name="ModelEngineKvt" ColumnName="ModelEngineKvt" />
+                <ScalarProperty Name="YearEngine" ColumnName="YearEngine" />
+                <ScalarProperty Name="ModelEngine" ColumnName="ModelEngine" />
+                <ScalarProperty Name="EngineNumber" ColumnName="EngineNumber" />
+                <ScalarProperty Name="TypeTS" ColumnName="TypeTS" />
                 <ScalarProperty Name="TypeOfDrive" ColumnName="TypeOfDrive" />
                 <ScalarProperty Name="EngineType" ColumnName="EngineType" />
                 <ScalarProperty Name="Color" ColumnName="Color" />

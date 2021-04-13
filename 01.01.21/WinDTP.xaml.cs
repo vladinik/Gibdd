@@ -31,7 +31,7 @@ namespace Gibdd
         private void FillTable()
         {
             drivers.Clear();
-            using (GIBDDContainer db = new GIBDDContainer())
+            using (GIBDDContainer1 db = new GIBDDContainer1())
             {
                 foreach (Transport t in db.Transport)
                     drivers.Add(t);
@@ -49,7 +49,7 @@ namespace Gibdd
 
                 this.Hide();
                 int id = int.Parse((DataGridDTP.SelectedCells[0].Column.GetCellContent(index) as TextBlock).Text);
-                using (GIBDDContainer db = new GIBDDContainer())
+                using (GIBDDContainer1 db = new GIBDDContainer1())
                 {
                     var transport = db.Transport.Join(db.Manufacture, p => p.Manufacturer, c => c.Id, (p, c) => new { Manufacture = c.Name, Model = p.Model, Year = p.Year, Weight = p.Weight }).ToList();
                     winTransports.DataGridDTP.ItemsSource = transport;

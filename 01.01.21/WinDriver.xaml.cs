@@ -33,7 +33,7 @@ namespace Gibdd
         public void FillTable()
         {
              
-            using (GIBDDContainer db = new GIBDDContainer())
+            using (GIBDDContainer1 db = new GIBDDContainer1())
             {
 
                 foreach (Drivers u in db.Drivers)
@@ -64,7 +64,7 @@ namespace Gibdd
                     int id = int.Parse((DataGridVoditeli.SelectedCells[0].Column.GetCellContent(index) as TextBlock).Text);
                    
 
-                    using (GIBDDContainer db = new GIBDDContainer())
+                    using (GIBDDContainer1 db = new GIBDDContainer1())
                     {
 
                         Drivers driver = db.Drivers.Find(id);
@@ -119,7 +119,7 @@ namespace Gibdd
                 if (index != null)
                     id = int.Parse((DataGridVoditeli.SelectedCells[0].Column.GetCellContent(index) as TextBlock).Text);
                 WinVY winVY = new WinVY();
-                using (GIBDDContainer db = new GIBDDContainer())
+                using (GIBDDContainer1 db = new GIBDDContainer1())
                 {
                     var licenses = db.Licences.FirstOrDefault(p => p.idDriver == id);
                     winVY.TextBoxLic.Text = licenses.LicenceSeries;
@@ -138,6 +138,13 @@ namespace Gibdd
         {
             WinDTP dannie = new WinDTP();
             dannie.Show();
+            this.Hide();
+        }
+
+        private void ButtonTran_Click(object sender, RoutedEventArgs e)
+        {
+            WinVinTransports transport = new WinVinTransports();
+            transport.Show();
             this.Hide();
         }
     }
